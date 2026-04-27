@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | Cyclia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9C27B0;
+            --primary-light: #F3E5F5;
+            --secondary: #7B1FA2;
+            --accent: #E1BEE7;
+            --text-main: #2D3436;
+            --text-light: #636E72;
+            --bg-page: #F8F9FA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background: var(--bg-page);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 60px;
+            background: var(--white);
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(156, 39, 176, 0.08);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: var(--text-light);
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 25px;
+            list-style-type: none;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 28px;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+        
+        /* Summary Box (Summary 2.0) */
+        .summary-box {
+            background: linear-gradient(135deg, #fdfcfd 0%, #f3e5f5 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--accent);
+            margin: 40px 0;
+        }
+
+        .summary-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.6em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .feature-item strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .highlight-alert {
+            background: #FFF3E0;
+            padding: 20px;
+            border-left: 5px solid #FF9800;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 0.95em;
+        }
+        
+        .contact-card {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-card h2 {
+            color: var(--white);
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        .contact-card h2::before { background: var(--white); }
+        
+        .contact-card a {
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid var(--accent);
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; margin: 0; border-radius: 0; }
+            .feature-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="version-badge">v1.3.14 (Lançamento de Abril)</div>
+            <h1>Privacidade na Cyclia</h1>
+            <p class="last-updated">Última atualização: 20 de abril de 2026</p>
+        </header>
+
+        <section class="summary-box">
+            <h3>✅ Resumo de Privacidade 2.0</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>📱 Dados Locais</strong>
+                    Seus dados de saúde são salvos APENAS no seu telefone. NUNCA são vendidos ou enviados para servidores externos.
+                </div>
+                <div class="feature-item">
+                    <strong>🛡️ Analytics Anônimo</strong>
+                    Usamos Firebase para melhorar o app, mas é 100% anônimo e NÃO inclui datas de período ou sintomas.
+                </div>
+                <div class="feature-item">
+                    <strong>🚫 Zero Venda</strong>
+                    Seus dados são sagrados. Jamais os compartilharemos com seguradoras, empregadores ou agências de marketing.
+                </div>
+                <div class="feature-item">
+                    <strong>🔐 Controle Total</strong>
+                    Você pode exportar seus dados para PDF ou excluir sua conta e todo rastro de análise com um toque em Ajustes.
+                </div>
+            </div>
+        </section>
+
+        <div class="highlight-alert">
+            <strong>⚠️ NOTA CLÍNICA:</strong> A Cyclia é uma ferramenta de bem-estar baseada em IA, não um dispositivo médico certificado. Consulte sempre um profissional antes de tomar decisões de saúde.
+        </div>
+
+        <section>
+            <h2>1. Informações que Coletamos</h2>
+            <p>A Cyclia minimiza a coleta de dados ao máximo. Os dados são divididos em duas categorias:</p>
+            
+            <h3>1.1 Dados Sensíveis (Locais)</h3>
+            <p>Estes dados <strong>estão sob seu controle exclusivo</strong> e não saem do seu dispositivo:</p>
+            <ul>
+                <li>Calendário menstrual e datas de registro.</li>
+                <li>Sintomas (dor, humor, energia, etc.).</li>
+                <li>Temperatura Basal do Corpo (BBT).</li>
+                <li>Notas pessoais e lembretes médicos.</li>
+            </ul>
+
+            <h3>1.2 Dados Técnicos (Anônimos)</h3>
+            <p>Informações coletadas para garantir o funcionamento do app:</p>
+            <ul>
+                <li>Modelo do dispositivo e versão do SO.</li>
+                <li>Relatórios de erros (Crashlytics).</li>
+                <li>Padrões de interação (quais telas você mais usa).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Minimização de Dados em Analytics</h2>
+            <p>Cumprindo com as diretrizes do <strong>Google Play (Abril 2026)</strong> para dados de Alta Sensibilidade, implementamos medidas rigorosas:</p>
+            <ul>
+                <li><strong>Sem Datas Exatas:</strong> Não enviamos datas de início do período nem datas de previsão futuras para nossas análises.</li>
+                <li><strong>Sem Sintomas:</strong> Não rastreamos quais sintomas específicos você registra.</li>
+                <li><strong>Anonimização de Instância:</strong> Ao excluir a conta, um reset total dos IDs do Firebase Analytics é acionado para garantir seu anonimato futuro.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Direitos ARCO e Exclusão</h2>
+            <p>Você tem controle absoluto sobre seus dados pessoais:</p>
+            <ul>
+                <li><strong>Acesso:</strong> Todas as informações estão visíveis para você nos Dashboards.</li>
+                <li><strong>Portabilidade:</strong> Você pode gerar relatórios detalhados em PDF a qualquer momento.</li>
+                <li><strong>Exclusão:</strong> A opção "Excluir conta e dados" apaga o banco de dados local e revoga os identificadores de análise.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Padrões de Segurança</h2>
+            <p>Implementamos criptografia <strong>AES-256</strong> nas exportações e protegemos o acesso local por meio dos sistemas biométricos nativos (Impressão digital/Rosto) do seu dispositivo, se você configurar.</p>
+        </section>
+
+        <div class="contact-card">
+            <h2>Dúvidas sobre sua Privacidade?</h2>
+            <p>Estamos aqui para ouvir você e proteger suas informações.</p>
+            <p style="margin-top: 20px;">
+                <a href="mailto:software.app.create@gmail.com">software.app.create@gmail.com</a>
+            </p>
+        </div>
+
+        <footer>
+            <p><strong>Cyclia</strong> - Sua Saúde, Sua Privacidade, Seu Controle</p>
+            <p>© 2026 Cyclia App Pro. Todos os direitos reservados.</p>
+            <p>Conformidade com a Política de Dados de Saúde do Google Play v2.0</p>
+        </footer>
+    </div>
+</body>
+</html>
